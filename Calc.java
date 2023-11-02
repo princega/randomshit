@@ -21,11 +21,11 @@ public class Calc extends JFrame implements ActionListener {
         b1.setBounds(100, 150, 50, 50);
         b2.setBounds(170, 150, 50, 50);
         // adding the elements to the frame
-        add(b1);
-        add(b2);
         add(t1);
         add(t2);
         add(t3);
+        add(b1);
+        add(b2);
         t3.setEditable(false);
         // setting the properties of the frame
         setSize(400, 400);
