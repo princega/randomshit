@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.GridLayout;
 
 public class Calc extends JFrame implements ActionListener {
     String s1, s2, s3;
@@ -14,23 +15,19 @@ public class Calc extends JFrame implements ActionListener {
         t3 = new JTextField();
         b1.addActionListener(this);
         b2.addActionListener(this);
-        // setting bounds
-        t1.setBounds(50, 50, 150, 20);
-        t2.setBounds(50, 100, 150, 20);
-        t3.setBounds(50, 150, 150, 20);
-        b1.setBounds(100, 150, 50, 50);
-        b2.setBounds(170, 150, 50, 50);
-        // adding the elements to the frame
+        setLayout(new GridLayout(4,1));
         add(t1);
+        add(new JLabel());
         add(t2);
+        add(new JLabel());
         add(t3);
+        add(new JLabel());
         add(b1);
         add(b2);
         t3.setEditable(false);
         // setting the properties of the frame
         setSize(400, 400);
         setVisible(true);
-        setLayout(null);
     }
     public void actionPerformed(ActionEvent e) {
         s1 = t1.getText();
