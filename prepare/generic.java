@@ -8,9 +8,23 @@ class Prince<T>{
 	}
 }
 
+class GenMethods{
+	static <T> void printarr(T[] arr){
+		System.out.println("Type = "+ arr.getClass().getComponentType().getName());
+		for(int i=0;i<arr.length;i++){
+			System.out.print(arr[i] + " ");
+		}
+	}
+}
+
 public class Main{
 	public static void main(String[] args){
 		Prince<Integer> o = new Prince<Integer> (88);
 		Prince<String> y = new Prince<String> ("Prince");
+		GenMethods g = new GenMethods();
+		int[] arr = {67, 32, 45, 78, 21};
+		char[] arr2 = {'a', 'b', 'c', 'd'};
+		g.printarr(arr);
+		g.printarr(arr2);
 	}
 }
